@@ -1,12 +1,9 @@
 function reduceHealthLateGame(
   player1Health,
   player2Health,
-  turnNumber,
-  healthReduction
+  turnNumber
 ) {
-  if (turnNumber < HEALTH_REDUCTION_MIN_TURN_NUMBER) {
-    return;
-  }
+  const healthReduction = turnNumber * 0.1;
 
   player1Health = getReducedHealth(player1Health, healthReduction);
   player2Health = getReducedHealth(player2Health, healthReduction);
